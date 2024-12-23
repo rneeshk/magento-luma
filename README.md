@@ -1,69 +1,93 @@
 # Magento-Luma
 
-Automation Testing Project for Magento Testing Website
+## Automation Testing Project for Magento Testing Website
 
-1. About the Website
+---
 
-The website is an e-commerce platform that offers a variety of products for customers to browse and purchase online. It includes key features such as user registration, product search, shopping cart, and checkout functionalities, making it an ideal candidate for testing user interactions and workflows.
+### 1. About the Website
 
-2. Purpose of Automation Testing
+The Magento-Luma website is a robust e-commerce platform offering a diverse range of products. Key features include:
 
-The primary objectives of automating the testing process for this website are:
+- **User Registration**
+- **Product Search**
+- **Shopping Cart**
+- **Checkout Functionalities**
 
-Efficiency: Reduce the time and effort required for manual testing by automating repetitive test cases.
+This makes it an ideal candidate for testing user interactions and workflows.
 
-Accuracy: Minimize human errors and ensure consistent test execution.
+---
 
-Scalability: Handle a large number of test scenarios across different browsers and devices.
+### 2. Purpose of Automation Testing
 
-Continuous Integration: Integrate automated testing into the development pipeline for faster feedback and quality assurance.
+Automation testing for this project aims to:
 
-Comprehensive Coverage: Validate critical functionalities such as user workflows, product navigation, checkout processes, and accessibility standards.
+- **Efficiency**: Automate repetitive test cases to reduce time and effort.
+- **Accuracy**: Eliminate human errors with consistent test execution.
+- **Scalability**: Support a vast number of scenarios across different browsers and devices.
+- **Continuous Integration**: Integrate testing into the development pipeline for rapid feedback.
+- **Comprehensive Coverage**: Validate critical workflows, navigation, checkout processes, and accessibility standards.
 
-3. Tech Stack
+---
 
-The following technologies were utilized to implement the automation testing framework:
+### 3. Tech Stack
 
-Selenium WebDriver: For browser automation and interaction with web elements.
+The project utilizes the following technologies: <br><br>
+<img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Selenium_Logo.png" alt="Selenium WebDriver" width="30" height="30"> &nbsp; <img src="https://1000logos.net/wp-content/uploads/2020/09/Java-Logo-640x400.png" alt="Java" width="40" height="30"> &nbsp; <img src="https://artoftesting.com/wp-content/uploads/2019/12/Page-Object-Model.jpg" alt="POM" width="50" height="30"> &nbsp; <img src="https://cdn.iconscout.com/icon/free/png-256/free-cucumber-logo-icon-download-in-svg-png-gif-file-formats--programming-langugae-language-pack-logos-icons-1175236.png?f=webp&w=256" alt="Cucumber" width="35" height="30"> &nbsp; <img src="https://miro.medium.com/v2/resize:fit:1400/0*AOGgJbK7Y8_SlReC.png" alt="TestNG" width="50" height="30"> &nbsp; <img src="https://cdn.codegym.cc/images/article/b9c21dfa-bfed-469f-a6bf-89d84ba8e8dc/original.jpeg" alt="JUnit" width="40" height="30"> &nbsp; <img src="https://miro.medium.com/v2/resize:fit:1400/1*FdqSMPjuMS7eH06zYKp1wA.png" alt="Extent Report" width="50" height="30">
+- **Selenium WebDriver**: For browser automation and web element interaction.
+- **Java**: Primary programming language for test script development.
+- **Page Object Model (POM) Pattern**: Enhances code maintainability and reusability.
+- **Cucumber**: Enables Behavior-Driven Development (BDD) using Gherkin syntax.
+- **TestNG & JUnit**: Manages test execution and generates detailed test reports.
+- **Extent Reports**: Produces visually appealing and comprehensive test execution reports.
 
-Java: As the primary programming language for developing test scripts.
+---
 
-Page Object Model (POM) Pattern: To enhance maintainability and reusability of the test code.
+### 4. Documentation
 
-Cucumber: For Behavior-Driven Development (BDD) and writing test cases in Gherkin syntax.
+Comprehensive documentation ensures a structured and efficient testing process:
 
-TestNG and JUnit: For managing test execution and generating detailed test reports.
+- **Test Scenarios**: High-level outline of key functionalities and workflows.
+- **Test Case Document**: Detailed execution steps, including preconditions, test data, and expected results.
+- **Bug Report**: Logs issues with reproduction steps, severity, screenshots, and resolution status.
+- **Test Execution Report**: Summary of results (passed, failed, skipped test cases).
+- **Test Plan**: Covers testing strategy, scope, resources, schedule, and deliverables.
+- **Usability Document**: Evaluates the website's user experience and design.
+- **Accessibility Document**: Assesses compliance with accessibility standards.
+- **Test Data**: Predefined input datasets to ensure reproducibility and consistency.
 
-Extent Reports: For creating visually appealing and comprehensive test execution reports.
+---
 
-4. Documentation
+### 5. How to Use
 
-To ensure a structured and efficient testing process, the following documentation was created:
+Follow these steps to execute the automation tests:
 
-Test Scenarios: A high-level document outlining the key functionalities and workflows to be tested.
+1. **Clone the Repository**: Clone this repository to your local machine:
+   ```bash
+   git clone <repository-url>
+   ```
+2. **Set Up Dependencies**: Install required dependencies for Selenium WebDriver and the chosen test framework.
+3. **Update Configurations**: Update configuration files with the website URL and browser details.
+4. **Execute Tests**: Run the tests using TestNG/JUnit runners.
+5. **View Reports**: Access Extent Reports for detailed analysis of test results.
 
-Test Case Document: Detailed steps for executing each test scenario, including preconditions, test data, and expected results.
+---
 
-Bug Report: A record of identified issues, including steps to reproduce, severity, screenshots, and resolution status.
+### 6. Extent Reports
 
-Test Execution Report: Summary of test results, including passed, failed, and skipped test cases.
+![Login](https://via.placeholder.com/600x300?text=Sample+Extent+Report)
 
-Test Plan: A comprehensive plan covering the testing strategy, scope, resources, schedule, and deliverables.
+Explore the visually appealing and detailed test execution results in Extent Reports.
 
-Usability Document: Evaluation of the website's user experience and interface design.
+---
 
-Accessibility Document: Assessment of the website’s compliance with accessibility standards and guidelines.
+### 7. Contribution
 
-Test Data: Predefined input data sets used during test execution to ensure reproducibility and consistency.
+We welcome contributions to improve this project. Please submit a pull request with a clear description of the changes.
 
-How to Use
+---
 
-Clone this repository to your local machine.
+### 8. License
 
-Set up the required dependencies for Selenium WebDriver and the chosen test framework.
+This project is licensed under the [MIT License](LICENSE).
 
-Update the configuration files with the website URL and browser details.
-
-Execute the tests using the TestNG/JUnit runners.
-
-View the Extent Reports for a detailed analysis of test results.
+---
