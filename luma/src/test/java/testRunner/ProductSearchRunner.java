@@ -7,10 +7,10 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-    features = {".//features/Login.feature"},
-    glue = "stepsDefinitions",
-    plugin = {"pretty", "html:target/Login.html"} // Report generation
+		features = {".//features/ProductSearch.feature"},
+		glue = "stepsDefinitions",
+		plugin = {"pretty", "html:target/ProductSearch.html"}
 )
-public class LoginRunner {
+public class ProductSearchRunner {
 
 }

@@ -55,147 +55,110 @@ public class AccountInfoUpdateSteps {
     By emailerror = By.xpath("//div[@id='email-error']");
     By confirmpassworderror = By.xpath("//div[@id='password-confirmation-error']");
     By emailalreadyexist = By.xpath("//div[@class='message-error error message']");
+    By differentconfirmpassword = By.xpath("//input[@id='password-confirmation']");
     
     
-    
-    @Given("User is on the Magento website")
-    public void user_is_on_the_magento_website() {
-        driver.get(websiteURL);
-    }
-
-    @Given("User navigates to the Sign In page")
-    public void user_navigates_to_the_sign_in_page() {
+    @Given("User is on the homepage and logged in")
+    public void user_is_on_the_homepage_and_logged_in() throws InterruptedException {
+    	driver.get(websiteURL);
         driver.findElement(loginpage).click();
-    }
-
-    @When("User enters the valid email")
-    public void user_enters_the_valid_email() {
         driver.findElement(email).sendKeys("testuser25015@example.com");
-    }
-    
-    @When("User enters the valid password")
-    public void user_the_enters_valid_password() {
-    	driver.findElement(password).sendKeys("testuser@25015");
-    }
-    
-    @When("User clicks the Sign In button")
-    public void user_clicks_the_sign_in_button() throws InterruptedException {
+        driver.findElement(password).sendKeys("testuser@25015");
         driver.findElement(loginbutton).click();
-        Thread.sleep(3000);
+        Thread.sleep(2000);
     }
 
-    @Then("User should be logged in successfully")
-    public void user_should_be_logged_in_successfully() {
-        driver.findElement(username).getText().contains("Test User");
-    }
-
-    @Then("User navigates to the My Account page")
-    public void user_navigates_to_the_my_account_page() {
+    @Then("verify User should be logged in successfully")
+    public void verify_user_should_be_logged_in_successfully() throws InterruptedException {
+    	driver.findElement(username).getText().contains("Test User");
         driver.findElement(dropdown).click();
+        Thread.sleep(2000);
         driver.findElement(myaccount).click();
+        Thread.sleep(2000);
     }
 
-    @When("User click on change password button")
-    public void user_click_on_change_password_button() {
+    @When("User clicks on the change password button")
+    public void user_clicks_on_the_change_password_button() throws InterruptedException {
         driver.findElement(changepasswordbtn).click();
+        Thread.sleep(2000);
     }
 
-    @When("User enters current password")
-    public void user_enters_current_password() {
-        driver.findElement(currentpassword).sendKeys("testuser@25015");
+    @When("User enters the current password")
+    public void user_enters_the_current_password() {
+    	driver.findElement(currentpassword).sendKeys("testuser@25015");
     }
 
-    @When("User enters new password")
-    public void user_enters_new_password() {
+    @When("User enters a new password")
+    public void user_enters_a_new_password() {
     	driver.findElement(newpassword).sendKeys("testuser@25015");
     }
 
-    @When("User enters confirmation password")
-    public void user_enters_confirmation_password() {
-        
+    @When("User enters the confirmation password")
+    public void user_enters_the_confirmation_password() {
+    	driver.findElement(newpasswordconfirm).sendKeys("testuser@25015");
     }
 
     @When("User clicks the Save button")
-    public void user_clicks_the_save_button() {
+    public void user_clicks_the_save_button() throws InterruptedException {
         driver.findElement(savebutton).click();
+        Thread.sleep(2000);
     }
 
     @Then("User should see a success message")
     public void user_should_see_a_success_message() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    	driver.findElement(informationchangesuccess).getText().contains("You saved the account information.");
     }
 
-    @When("User click on edit button")
-    public void user_click_on_edit_button() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    @When("User clicks on the edit button")
+    public void user_clicks_on_the_edit_button() throws InterruptedException {
+        driver.findElement(editbutton).click();
+        Thread.sleep(2000);
     }
 
-    @When("User check the change email checkbox")
-    public void user_check_the_change_email_checkbox() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    @When("User checks the change email checkbox")
+    public void user_checks_the_change_email_checkbox() throws InterruptedException {
+        driver.findElement(emailboxcheck).click();
+        Thread.sleep(2000);
     }
 
     @When("User clears the Email field")
     public void user_clears_the_email_field() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        driver.findElement(email).clear();
     }
 
-    @When("User enters new valid email")
-    public void user_enters_new_valid_email() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    @When("User enters email")
+    public void user_enters_email() {
+    	driver.findElement(email).sendKeys("testuser25015@example.com");
     }
 
-    @When("User click manage address button")
-    public void user_click_manage_address_button() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    @When("User clicks on the manage address button")
+    public void user_clicks_on_the_manage_address_button() throws InterruptedException {
+        driver.findElement(manageaddress).click();
+        Thread.sleep(2000);
     }
 
     @When("User clicks the Save Address button")
-    public void user_clicks_the_save_address_button() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    public void user_clicks_the_save_address_button() throws InterruptedException {
+        driver.findElement(saveaddress).click();
+        Thread.sleep(2000);
     }
 
-    @Then("User should see an reqired message for the required fields.")
-    public void user_should_see_an_reqired_message_for_the_required_fields() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    @Then("User should see a required message for the required fields")
+    public void user_should_see_a_required_message_for_the_required_fields() {
+    	driver.findElement(telephoneerror).getText().contains("This is a required field.");
+    	driver.findElement(streeterror).getText().contains("This is a required field.");
+    	driver.findElement(cityerror).getText().contains("This is a required field.");
+    	driver.findElement(regionerror).getText().contains("Please select an option.");
+    	driver.findElement(ziperror).getText().contains("This is a required field.");
     }
 
-    @When("User enters invalid email")
-    public void user_enters_invalid_email() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
-    }
-
-    @Then("User should see an error message for enter invalid email")
-    public void user_should_see_an_error_message_for_enter_invalid_email() {
-    	driver.findElement(emailerror).getText().contains("Please enter a valid email address.");
-    }
-
-    @When("User enters different confirmation password")
-    public void user_enters_different_confirmation_password() {
-    	driver.findElement(newpassword).sendKeys("Different@12");
+    @When("User enters a different confirmation password")
+    public void user_enters_a_different_confirmation_password() {
+        driver.findElement(differentconfirmpassword).sendKeys("Different@12");
     }
 
     @Then("User should see an error message related to password mismatch")
     public void user_should_see_an_error_message_related_to_password_mismatch() {
-    	driver.findElement(confirmpassworderror).getText().contains("Please enter the same value again.");
-    }
-
-    @When("User enters existing email")
-    public void user_enters_existing_email() {
-        driver.findElement(email).sendKeys("testuser25014@example.com");
-    }
-
-    @Then("User should see an error message indicating the email is already in use")
-    public void user_should_see_an_error_message_indicating_the_email_is_already_in_use() {
-        driver.findElement(emailalreadyexist).getText().contains("The password doesn't match this account. Verify the password and try again.");
+        driver.findElement(confirmpassworderror).getText().contains("Please enter the same value again.");
     }
 }
