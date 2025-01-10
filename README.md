@@ -23,8 +23,7 @@ Automation testing for this project aims to:
 
 - **Efficiency**: Automate repetitive test cases to reduce time and effort.
 - **Accuracy**: Eliminate human errors with consistent test execution.
-- **Scalability**: Support a vast number of scenarios across different browsers and devices.
-- **Continuous Integration**: Integrate testing into the development pipeline for rapid feedback.
+- **Scalability**: Support a vast number of scenarios across Chrome browsers.
 - **Comprehensive Coverage**: Validate critical workflows, navigation, checkout processes, and accessibility standards.
 
 ---
