@@ -11,7 +11,6 @@ The Magento-Luma website is a robust e-commerce platform offering a diverse rang
 - **User Registration**
 - **Product Search**
 - **Shopping Cart**
-- **Checkout Functionalities**
 
 This makes it an ideal candidate for testing user interactions and workflows.
 
